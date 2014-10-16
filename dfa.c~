@@ -188,7 +188,7 @@ token get_token(){
 
 valid_t reduce_char(char c)
 {
-  if(c > 126)
+  if(c > 126 || c < 0)
     return invalid;
   
   static valid_t lookup[256] = {
